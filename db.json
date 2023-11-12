@@ -1,0 +1,28 @@
+{
+  "movie": [
+    {
+      "id": 1,
+      "title": "Dead Pool",
+      "rating": 9.0,
+      "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, exercitationem eos quod saepe officiis tempore asperiores delectus fugiat excepturi! Nobis sapiente sint necessitatibus! Voluptates, qui?"
+    },
+    {
+      "id": 2,
+      "title": "Loki",
+      "rating": 8.0,
+      "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, exercitationem eos quod saepe officiis tempore asperiores delectus fugiat excepturi! Nobis sapiente sint necessitatibus! Voluptates, qui?"
+    },
+    {
+      "id": 3,
+      "title": "Naruto",
+      "rating": 8.5,
+      "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, exercitationem eos quod saepe officiis tempore asperiores delectus fugiat excepturi! Nobis sapiente sint necessitatibus! Voluptates, qui?"
+    },
+    {
+      "id": 4,
+      "title": "One Piece",
+      "rating": 8.5,
+      "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, exercitationem eos quod saepe officiis tempore asperiores delectus fugiat excepturi! Nobis sapiente sint necessitatibus! Voluptates, qui?"
+    }
+  ]
+}

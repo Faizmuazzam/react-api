@@ -3,13 +3,13 @@
     {
       "id": 1,
       "title": "Dead Pool",
-      "rating": 9.0,
+      "rating": 9,
       "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, exercitationem eos quod saepe officiis tempore asperiores delectus fugiat excepturi! Nobis sapiente sint necessitatibus! Voluptates, qui?"
     },
     {
       "id": 2,
       "title": "Loki",
-      "rating": 8.0,
+      "rating": 8,
       "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, exercitationem eos quod saepe officiis tempore asperiores delectus fugiat excepturi! Nobis sapiente sint necessitatibus! Voluptates, qui?"
     },
     {
@@ -23,6 +23,18 @@
       "title": "One Piece",
       "rating": 8.5,
       "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, exercitationem eos quod saepe officiis tempore asperiores delectus fugiat excepturi! Nobis sapiente sint necessitatibus! Voluptates, qui?"
+    },
+    {
+      "title": "Test 1",
+      "rating": "9",
+      "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, exercitationem eos quod saepe officiis tempore asperiores delectus fugiat excepturi! Nobis sapiente sint necessitatibus! Voluptates, qui?",
+      "id": 5
+    },
+    {
+      "title": "Test 2",
+      "rating": "9",
+      "desc": "Test",
+      "id": 6
     }
   ]
 }

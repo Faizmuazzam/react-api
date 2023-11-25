@@ -1,27 +1,46 @@
-import { useEffect, useState } from "react";
+import React, { useState } from "react";
 
-import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
-import { baseUrl } from "../api/Api";
-
+import { MovieType } from "../utils/Types";
+import { Instance } from "../utils/AxiosInstance";
 
 const Create = () => {
-  const [putData, setPutData] = useState({});
+  // const [putData, setPutData] = useState({});
 
-  const [data, setData] = useState({});
+  const [data, setData] = useState({
+    title: "",
+    rating: "",
+    desc: "",
+  });
 
-  const getMovies = async () => {
+  const navigate = useNavigate();
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    // e.target.name
+    // e.target.value
+    setData({ ...data, [name]: value });
+  };
+
+  const createData = () => {
+    ``;
     try {
-      const res = await axios.get(`${baseUrl}movie`);
-      // console.log(res.data);
-      setData(res.data);
+      // const response = axios.post<MovieType>(`${baseUrl}movie`, data, {
+      //   headers: { "Content-Type": "application/json" },
+      // });
+
+      const response = Instance.post<MovieType>('/movie', data);
+
+      console.log(`Sukses Create Data : ${response}`);
+      navigate("/");
     } catch (error) {
+      console.log(error);
     }
   };
 
-  useEffect(() => {
-    getMovies();
-  }, []);
   return (
     <div className="max-w-[900px] mx-auto py-10">
       <form>
@@ -31,9 +50,11 @@ const Create = () => {
           </label>
           <input
             type="text"
-            placeholder="Type here"
+            placeholder="Jajal Keks"
             className="input input-bordered w-full"
             name="title"
+            value={data.title}
+            onChange={handleChange}
           />
         </div>
         <div className="form-control w-full mt-3">
@@ -45,21 +66,31 @@ const Create = () => {
             placeholder="Type here"
             className="input input-bordered w-full"
             name="rating"
+            value={data.rating}
+            onChange={handleChange}
           />
         </div>
         <div className="form-control w-full mt-3">
           <label className="label">
-            <span className="label-text">Rating</span>
+            <span className="label-text">Desc</span>
           </label>
           <textarea
             className="textarea textarea-bordered"
             placeholder="Bio"
             name="desc"
+            value={data.desc}
+            onChange={handleChange}
           ></textarea>
         </div>
 
         <div className="mt-5">
-          <button className="btn btn-success">Success</button>
+          <button
+            type="submit"
+            onClick={createData}
+            className="btn btn-success"
+          >
+            Success
+          </button>
         </div>
       </form>
     </div>
